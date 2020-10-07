@@ -17,6 +17,31 @@ class CarlPlayer extends Player
 
     public function getChoice()
     {
+        // -------------------------------------    -----------------------------------------------------
+        // How to get my Last Choice           ?    $this->result->getLastChoiceFor($this->mySide) -- if 0 (first round)
+        // How to get the opponent Last Choice ?    $this->result->getLastChoiceFor($this->opponentSide) -- if 0 (first round)
+        // -------------------------------------    -----------------------------------------------------
+        // How to get my Last Score            ?    $this->result->getLastScoreFor($this->mySide) -- if 0 (first round)
+        // How to get the opponent Last Score  ?    $this->result->getLastScoreFor($this->opponentSide) -- if 0 (first round)
+        // -------------------------------------    -----------------------------------------------------
+        // How to get all the Choices          ?    $this->result->getChoicesFor($this->mySide)
+        // How to get the opponent Last Choice ?    $this->result->getChoicesFor($this->opponentSide)
+        // -------------------------------------    -----------------------------------------------------
+        // How to get my Last Score            ?    $this->result->getLastScoreFor($this->mySide)
+        // How to get the opponent Last Score  ?    $this->result->getLastScoreFor($this->opponentSide)
+        // -------------------------------------    -----------------------------------------------------
+        // How to get the stats                ?    $this->result->getStats()
+        // How to get the stats for me         ?    $this->result->getStatsFor($this->mySide)
+        //          array('name' => value, 'score' => value, 'friend' => value, 'foe' => value
+        // How to get the stats for the oppo   ?    $this->result->getStatsFor($this->opponentSide)
+        //          array('name' => value, 'score' => value, 'friend' => value, 'foe' => value
+        // -------------------------------------    -----------------------------------------------------
+        // How to get the number of round      ?    $this->result->getNbRound()
+        // -------------------------------------    -----------------------------------------------------
+        // How can i display the result of each round ? $this->prettyDisplay()
+        // -------------------------------------    -----------------------------------------------------
+        
+
 
         $array = [
             "rock" => parent::paperChoice(),
@@ -43,16 +68,13 @@ class CarlPlayer extends Player
             $my_choice = parent::scissorsChoice();
         }
 
-        if ($last_score == 3) {
-
+        if ($m_last_score == 3) {
             $my_choice = $array[$my_choice];
-            if ($nb_turn > 300) {
-                $my_choice = $array[$my_choice];
-            }
         }
 
         if ($last_score == 1) {
             $my_choice = $array[$m_last_choice];
+            $my_choice = $array[$my_choice];
         }
 
 
