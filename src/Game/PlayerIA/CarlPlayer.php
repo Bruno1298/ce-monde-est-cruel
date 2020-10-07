@@ -31,6 +31,8 @@ class CarlPlayer extends Player
         $last_choice = $this->result->getLastChoiceFor($this->opponentSide);
 
         $my_choice = parent::paperChoice();
+
+        $nb_turn = $this->result->getNbRound();
         
 
         if ($last_choice == 'rock') {
@@ -42,7 +44,11 @@ class CarlPlayer extends Player
         }
 
         if ($last_score == 3) {
+
             $my_choice = $array[$my_choice];
+            if ($nb_turn > 300) {
+                $my_choice = $array[$my_choice];
+            }
         }
 
         if ($last_score == 1) {
