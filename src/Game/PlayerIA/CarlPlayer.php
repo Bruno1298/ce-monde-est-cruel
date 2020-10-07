@@ -7,7 +7,8 @@ use Hackathon\Game\Result;
 /**
  * Class CarlPlayer
  * @package Hackathon\PlayerIA
- * @author YOUR NAME HERE
+ * @author Bruno ZHENG
+ * J'ai essayer de prédire les autres. C'étais difficiles.
  */
 class CarlPlayer extends Player
 {
