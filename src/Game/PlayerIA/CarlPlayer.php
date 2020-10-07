@@ -18,7 +18,6 @@ class CarlPlayer extends Player
     public function getChoice()
     {
 
-
         $array = [
             "rock" => parent::paperChoice(),
             "scissors" => parent::rockChoice(),
@@ -43,11 +42,11 @@ class CarlPlayer extends Player
         }
 
         if ($last_score == 3) {
-            $my_choice = $array[$m_last_choice];
+            $my_choice = $array[$my_choice];
         }
 
         if ($last_score == 1) {
-            $my_choice = $array[$my_choice];
+            $my_choice = $array[$m_last_choice];
         }
 
 
