@@ -8,7 +8,7 @@ use Hackathon\Game\Result;
  * Class CarlPlayer
  * @package Hackathon\PlayerIA
  * @author Bruno ZHENG
- * J'ai essayer de prédire les autres. C'étais difficiles.
+ * J'ai essayer de prédire les autres avec 2-3 coups d'avances. C'étais difficiles.
  */
 class CarlPlayer extends Player
 {
